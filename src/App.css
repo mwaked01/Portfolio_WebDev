@@ -25,4 +25,19 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-snap-align: center;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  -webkit-border-radius: 1ex;
+}
+
+html {
+  scroll-snap-type: y mandatory;
 }
