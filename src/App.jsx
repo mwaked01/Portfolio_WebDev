@@ -6,6 +6,9 @@ import Projects from './components/Projects'
 
 import './App.css'
 
+import Button from '@mui/material/Button';
+import { GitHub, LinkedIn} from '@mui/icons-material';
+
 function App() {
   const [activeSection, setActiveSection] = useState("ABOUT");
   const contentRef = useRef(null);
@@ -45,6 +48,15 @@ function App() {
         <Navbar
           activeSection={activeSection}
           scrollToSection={scrollToSection} />
+                  <footer>
+          <a href='https://linkedin.com/in/mohamed-waked-316899212'>
+            <LinkedIn sx={{ fontSize: 40 }} />
+          </a>
+          <a href="https://github.com/mwaked01">
+            <GitHub sx={{ fontSize: 40 }} />
+          </a>
+          <Button sx={{width:"fit-content"}} variant="contained" color='success' >contact</Button>
+        </footer>
       </header>
 
       <div className='sections' ref={contentRef}>
