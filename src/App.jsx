@@ -47,8 +47,13 @@ function App() {
   return (
     <>
       <header>
-        <h1>Hi 👋</h1>
-        <h1>I'm Mohamed Waked</h1>
+        <div id='greeting'>
+          <div id='hi'>
+            <h1 className="logo">Hi </h1>
+            <div className='emoji'>👋</div>
+          </div>
+          <h1 className="logo">I'm Mohamed Waked </h1>
+        </div>
         <Navbar
           activeSection={activeSection}
           scrollToSection={scrollToSection} />
