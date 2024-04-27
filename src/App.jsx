@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
+
 import Navbar from './components/Navbar'
 import Skills from './components/Skills'
+import Projects from './components/Projects'
 
 import './App.css'
 
@@ -42,7 +44,7 @@ function App() {
         <h1>I'm Mohamed Waked</h1>
         <Navbar
           activeSection={activeSection}
-          scrollToSection={scrollToSection}/>
+          scrollToSection={scrollToSection} />
       </header>
 
       <div className='sections' ref={contentRef}>
@@ -59,7 +61,7 @@ function App() {
         </section>
 
         <Skills activeSection={activeSection} />
-
+        <Projects />
       </div>
     </>
   )
