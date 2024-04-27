@@ -17,7 +17,8 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
-    "react-material-ui-carousel": "^3.4.2"
+    "react-material-ui-carousel": "^3.4.2",
+    "semantic-ui-react": "^2.1.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
