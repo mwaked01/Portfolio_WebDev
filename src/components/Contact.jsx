@@ -12,6 +12,8 @@ import { Form } from 'semantic-ui-react';
 
 import emailjs from 'emailjs-com';
 
+import Swal from 'sweetalert2';
+
 const SERVICE_ID = "service_75bbx39";
 const TEMPLATE_ID = "template_4zv62l6";
 const USER_ID = "n_JyyoXkMteWYmNiR";
@@ -24,10 +26,18 @@ const Contact = (props) => {
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
-        console.log(result.text);
         setOpenContact(false);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully'
+        })
       }, (error) => {
-        console.log(error.text);
+        setOpenContact(false);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        })
       });
     e.target.reset()
   };

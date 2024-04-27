@@ -19,7 +19,8 @@
     "@mui/material": "^5.15.14",
     "react-material-ui-carousel": "^3.4.2",
     "semantic-ui-react": "^2.1.5",
-    "emailjs-com": "^3.2.0"
+    "emailjs-com": "^3.2.0",
+    "sweetalert2": "^11.10.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
