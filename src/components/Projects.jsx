@@ -5,11 +5,16 @@ import smart_to_do_listGIF from '/public/projects/smart_to_do_list/smart_to_do_l
 import tweeterGIF from '/public/projects/tweeter/tweeter.gif'
 import tinyAppGIF from '/public/projects/tinyApp/tinyApp.gif'
 
+import Carousel from "react-material-ui-carousel";
 
 const Projects = (props) => {
   return (
     <section id="PROJECTS" >
-
+      <Carousel
+        autoPlay={false}
+        indicators={true}
+        navButtonsAlwaysVisible={true}
+      >
         <div>
             <h1>Go Forage</h1>
           <img src={goForageGIF} alt="Skills Icon" />
@@ -55,8 +60,7 @@ const Projects = (props) => {
             TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs
           </p>
         </div>
-
-  
+      </Carousel>
     </section>
   );
 };
