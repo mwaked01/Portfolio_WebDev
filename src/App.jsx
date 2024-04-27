@@ -6,7 +6,10 @@ function App() {
 
   return (
     <>
-      Hello!
+    <header>
+      <h1>Hi 👋</h1>
+      <h1>I'm Mohamed Waked</h1>
+    </header>
     </>
   )
 }
