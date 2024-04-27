@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import ParticlesComponent from './components/Particles'
 
 import './App.css'
 
@@ -46,6 +47,7 @@ function App() {
 
   return (
     <>
+      <ParticlesComponent id='particles' />
       <header>
         <div id='greeting'>
           <div id='hi'>
