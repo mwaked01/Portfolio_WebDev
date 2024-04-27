@@ -37,23 +37,28 @@ theme = createTheme(theme, {
 
 
 const Navbar = (props) => {
+  const { scrollToSection, activeSection, setOpenContact } = props;
+
+  const handleChange = (event, newValue) => {
+    const section = event.target.innerText.toUpperCase();
+    scrollToSection(section);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <nav>
         <Tabs
           orientation="vertical"
-          value={0}
+          value={activeSection}
+          onChange={handleChange}
           textColor="primary"
           indicatorColor="secondary"
-
         >
           <Tab label="about" value="ABOUT" />
           <Tab label="Skills" value="SKILLS" />
           <Tab label="Projects" value="PROJECTS" />
         </Tabs>
       </nav>
-
     </ThemeProvider>
   );
 };
