@@ -3,11 +3,12 @@ import { useState, useRef, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 import './App.css'
 
 import Button from '@mui/material/Button';
-import { GitHub, LinkedIn} from '@mui/icons-material';
+import { GitHub, LinkedIn } from '@mui/icons-material';
 
 function App() {
   const [activeSection, setActiveSection] = useState("ABOUT");
@@ -40,6 +41,9 @@ function App() {
     setActiveSection(section);
   };
 
+  const [openContact, setOpenContact] = useState(false);
+  const handleOpenContact = () => setOpenContact(true);
+
   return (
     <>
       <header>
@@ -48,14 +52,14 @@ function App() {
         <Navbar
           activeSection={activeSection}
           scrollToSection={scrollToSection} />
-                  <footer>
+        <footer>
           <a href='https://linkedin.com/in/mohamed-waked-316899212'>
             <LinkedIn sx={{ fontSize: 40 }} />
           </a>
           <a href="https://github.com/mwaked01">
             <GitHub sx={{ fontSize: 40 }} />
           </a>
-          <Button sx={{width:"fit-content"}} variant="contained" color='success' >contact</Button>
+          <Button sx={{ width: "fit-content" }} variant="contained" color='success' onClick={handleOpenContact}>contact</Button>
         </footer>
       </header>
 
@@ -73,7 +77,12 @@ function App() {
         </section>
 
         <Skills activeSection={activeSection} />
+
         <Projects />
+
+        {openContact &&
+          <Contact openContact={openContact} setOpenContact={setOpenContact} />
+        }
       </div>
     </>
   )
