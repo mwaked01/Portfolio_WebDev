@@ -24,14 +24,16 @@ import vscodeIcon from '/public/icons/vscode.svg'
 import gitIcon from '/public/icons/git.svg'
 import figmaIcon from '/public/icons/figma.svg'
 
-const Skills = (props) => {
 
+const Skills = (props) => {
+  const { activeSection } = props;
   return (
     <section id="SKILLS" >
-     <div>
+      {activeSection === "SKILLS" &&
+        <div>
           <div className='title'>
             <h3>
-              <SettingsSuggest fontSize='large' className='title_icon' color='info'/>
+              <SettingsSuggest fontSize='large' className='title_icon' color='info' />
               Development
             </h3>
             <div className='sub-section'>
@@ -93,7 +95,7 @@ const Skills = (props) => {
 
           <div className='title'>
             <h3>
-            <BugReportOutlined fontSize='large' className='title_icon' color='info'/>
+              <BugReportOutlined fontSize='large' className='title_icon' color='info' />
               Testing
             </h3>
             <div className='sub-section'>
@@ -117,7 +119,7 @@ const Skills = (props) => {
           </div>
           <div className='title'>
             <h3>
-            <HomeRepairService fontSize='large' className='title_icon' color='info'/>
+              <HomeRepairService fontSize='large' className='title_icon' color='info' />
               SYSTEMS AND TOOLS
             </h3>
             <div className='sub-section'>
@@ -140,7 +142,9 @@ const Skills = (props) => {
             </div>
           </div>
         </div>
+      }
     </section>
+
   );
 };
 
