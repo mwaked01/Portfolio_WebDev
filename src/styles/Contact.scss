@@ -15,13 +15,24 @@ Form {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  
 }
 
-#email{
+#email {
   display: flex;
 }
-#location{
-  display: flex;
 
+#location {
+  display: flex;
+}
+
+.field {
+  width: 20em;
+}
+
+#form-button {
+  width: 10em;
+}
+
+.contact-icon {
+  padding-right: 10px;
 }
