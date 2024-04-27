@@ -10,10 +10,28 @@ import { Email, LocationOn } from '@mui/icons-material';
 
 import { Form } from 'semantic-ui-react';
 
+import emailjs from 'emailjs-com';
+
+const SERVICE_ID = "service_75bbx39";
+const TEMPLATE_ID = "template_4zv62l6";
+const USER_ID = "n_JyyoXkMteWYmNiR";
+
 const Contact = (props) => {
   const { openContact, setOpenContact } = props;
-
   const handleCloseContact = () => setOpenContact(false);
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      .then((result) => {
+        console.log(result.text);
+        setOpenContact(false);
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset()
+  };
+
   return (
     <section id="CONTACT" >
       <Modal
@@ -31,7 +49,7 @@ const Contact = (props) => {
       >
         <Fade in={openContact}>
           <Box>
-            <Form>
+            <Form onSubmit={handleOnSubmit}>
               <TextField
                 className='field'
                 id="outlined-multiline-static"
