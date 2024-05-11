@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import About from './components/About'
 import ParticlesComponent from './components/Particles'
 
 import './App.css'
@@ -71,18 +72,8 @@ function App() {
       </header>
 
       <div className='sections' ref={contentRef}>
-        <section id="ABOUT" >
-          <h2>ABOUT ME</h2>
-          <p>
-            Motivated professional who is eager to
-            transition into a career in Web Development.
-            Highly motivated self starter with a strong passion
-            for programming. Committed to continuous learning
-            and staying up-to-date with the latest industry trends.
-            Looking forward to embracing new challenges.
-          </p>
-        </section>
 
+        <About />
         <Skills activeSection={activeSection} />
 
         <Projects />
