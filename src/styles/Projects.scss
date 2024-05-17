@@ -1,5 +1,16 @@
-
-#PROJECTS img {
-  padding-left: 6vw;
-  width: 48vw;
+.project_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+#PROJECTS img {
+  // padding-left: 6vw;
+  transform: translateX(6vw);
+  width: 48vw;
+  &:hover {
+    border: 2px solid rgb(33, 224, 84); // Green border on hover
+  border-width: 0.25em;
+  }
+}
+
+
