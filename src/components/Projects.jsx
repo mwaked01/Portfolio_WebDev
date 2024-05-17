@@ -16,7 +16,7 @@ const Projects = (props) => {
         navButtonsAlwaysVisible={true}
       >
         <div>
-            <h1>Go Forage</h1>
+          <a href="https://github.com/emilyem1/go-forage"><h1>Go Forage</h1></a>
           <img src={goForageGIF} alt="Skills Icon" />
           <p >
             A single page application that connects mushroom foragers together and allows them to share blogs and map locations of their foraging spots.
@@ -24,7 +24,7 @@ const Projects = (props) => {
         </div>
 
         <div>
-          <h1>Smart TO-DO List</h1>
+          <a href="https://github.com/mwaked01/Smart-TODO-List"><h1>Smart TO-DO List</h1></a>
           <img src={smart_to_do_listGIF} alt="Skills Icon" />
 
           <p >
@@ -35,7 +35,7 @@ const Projects = (props) => {
         </div>
 
         <div>
-          <h1>Tweeter</h1>
+          <a href="https://github.com/mwaked01/tweeter"> <h1>Tweeter</h1></a>
           <img src={tweeterGIF} alt="Skills Icon" />
           <p >
             A multi-page Airbnb clone that uses server-side Javascript to display the information from queries to web pages via SQL queries.
@@ -44,7 +44,7 @@ const Projects = (props) => {
         <div>
 
           <div>
-            <h1> PhotoLabs</h1>
+            <a href="https://github.com/mwaked01/photolabs"><h1> PhotoLabs</h1></a>
           </div>
           <img src={photolabsGIF} alt="Skills Icon" />
 
@@ -54,7 +54,7 @@ const Projects = (props) => {
         </div>
 
         <div>
-          <h1> TinyApp</h1>
+          <a href="https://github.com/mwaked01/tinyapp"><h1> TinyApp</h1></a>
           <img src={tinyAppGIF} alt="Skills Icon" />
           <p >
             TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs
