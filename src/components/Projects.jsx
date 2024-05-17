@@ -25,7 +25,7 @@ const Projects = (props) => {
   return (
     <section id="PROJECTS">
       <Carousel
-        autoPlay={true}
+        autoPlay={false}
         indicators={true}
         navButtonsAlwaysVisible={true}
       >
