@@ -1,32 +1,55 @@
-import "../styles/About.scss"
+import { useEffect, useState } from "react";
+import '../styles/About.scss';
+const About = () => {
+  const [visibleText, setVisibleText] = useState("");
+  const [lineIndex, setLineIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
 
-const About = (props) => {
-  const { activeSection } = props;
+  const text = `A web developer passionate about bridging the gap between intuitive design and functional solutions       
+  I am a freelance full stack web developer currently integrating organizational
+  platforms for local business. I work closely with my clients to tailor
+  their webApps to their desired design and functionality. `;
+
+  const lines = text.split("\n");
+
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      if (lineIndex < lines.length) {
+        const currentLine = lines[lineIndex];
+        if (charIndex < currentLine.length) {
+          setVisibleText((prev) => prev + currentLine[charIndex]);
+          setCharIndex((prev) => prev + 1);
+        } else {
+          setVisibleText((prev) => prev + "\n");
+          setLineIndex((prev) => prev + 1);
+          setCharIndex(0);
+        }
+      }
+    }, 10); // Adjust typing speed (milliseconds per character)
+
+    return () => clearInterval(typingInterval);
+  }, [charIndex, lineIndex, lines]);
+
   return (
-    <section id="ABOUT" >
-      <h2>ABOUT ME</h2>
-      <div className="content">
-        <p>
-          "I need you to figure it out" has always been my favorite assignment
-          at any job I've had, especially when I can write code to make it
-          happen. I believe that a code editor is the ultimate canvas where
-          creativity can branch into any aspect of life. Commitment to continuous
-          learning and staying up-to-date with the latest industry trends is a
-          must in my daily journey toward becoming a better programmer, and
-          it's a crucial step of the journey which I enjoy.
-        </p>
-        <p>
-          I am currently a CNC Programmer responsible for managing multiple
-          projects within my department. Teamwork and attention to detail
-          are the main keys to my success in this role. Within one year in
-          the industry, I quickly became proficient with the required CAD
-          and CAM software, as well as the machine's controllers.
-          By doing so, I was promoted to a senior machinist position and
-          became responsible for working on finished production tools.
-        </p>
+    <section id="ABOUT">
+      <div id="greeting">
+        <h1 className="logo">Hi </h1>
+        <div className="emoji">👋</div>
+        <h1 className="logo">I'm Mohamed Waked,</h1>
+      </div>
+      <div className="code-typer">
+        {lines.map((_, idx) => (
+          <div className="code-line" key={idx}>
+            <span className="line-number">{idx + 1}</span>
+            <span>
+              {visibleText.split("\n")[idx] || ""}
+              {idx === lineIndex && <span className="cursor">|</span>}
+            </span>
+          </div>
+        ))}
+        <span className="cursor">|</span>
       </div>
     </section>
-
   );
 };
 

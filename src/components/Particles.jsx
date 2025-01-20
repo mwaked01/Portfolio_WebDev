@@ -32,11 +32,7 @@ const ParticlesComponent = (props) => {
 
   const options = useMemo(
     () => ({
-      background: {
-        color: {
-          value: "#0d1832",
-        },
-      },
+
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -61,13 +57,13 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: "#284682",
         },
         links: {
-          color: "#FFFFFF",
+          color: "#284682",
           distance: 150,
           enable: true,
-          opacity: 0.3,
+          opacity: 0.2,
           width: 1,
         },
         move: {
@@ -87,7 +83,7 @@ const ParticlesComponent = (props) => {
           value: 150,
         },
         opacity: {
-          value: 1.0,
+          value: 0.5,
         },
         shape: {
           type: "circle",
@@ -102,7 +98,7 @@ const ParticlesComponent = (props) => {
   );
 
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  return <Particles id={props.id} init={particlesLoaded} className={props.className} options={options} />; 
 };
 
 export default ParticlesComponent;

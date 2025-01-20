@@ -1,0 +1,22 @@
+@import 'variables';
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 5em;
+    font-size: larger;
+    position: relative;
+}
+.particles-wrapper {
+    position: absolute; // Position particles inside the content section
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; // Ensures the particles stay behind the content
+    pointer-events: none; // Avoids blocking clicks or interactions
+}
+

@@ -1,3 +1,4 @@
+@import 'variables';
 h3 {
   display: flex;
   align-items: center;
@@ -12,17 +13,16 @@ h3 {
   justify-content: space-between;
   flex-wrap: wrap;
   border: solid;
-  border-color: #1c54b2;
+  border-color: inherit;
   border-radius: 10px;
   padding: 1em;
   margin-bottom: 1em;
-  width: auto;
   background-color: rgba(49, 117, 235, 0.2);
 }
 
 .sub-section {
   display: flex;
-  width: fit-content;
+flex-wrap: wrap;  
 }
 
 .icon {
@@ -34,6 +34,6 @@ h3 {
 }
 
 .icon img {
-  width: 2.5em;
-  height: 2.5em;
+  width: 4vw;
+  // height: 7vw;
 }

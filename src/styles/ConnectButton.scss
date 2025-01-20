@@ -1,0 +1,36 @@
+@import 'variables';
+
+.connect-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s;
+
+  &:hover {
+    // transform: translateY(-5px);
+
+    .arrow-icon {
+      transform: translate(5px, -5px);
+    }
+  }
+
+  .arrow-icon {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+  }
+}
+
+.dark-mode {
+  .connect-button {
+    background-color: darken($primary-color, 15%);
+  }
+}
+

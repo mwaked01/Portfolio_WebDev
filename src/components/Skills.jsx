@@ -29,120 +29,120 @@ const Skills = (props) => {
   const { activeSection } = props;
   return (
     <section id="SKILLS" >
-      {activeSection === "SKILLS" &&
-        <div>
-          <div className='title'>
-            <h3>
-              <SettingsSuggest fontSize='large' className='title_icon' color='info' />
-              Development
-            </h3>
-            <div className='sub-section'>
-              <div className="icon">
-                <img src={javascriptIcon} alt="Skills Icon" />
-                JavaScript
-              </div>
-              <div className="icon">
-                <img src={pythonIcon} alt="Skills Icon" />
-                Python
-              </div>
-              <div className="icon">
-                <img src={railIcon} alt="Skills Icon" />
-                Ruby on Rails
-              </div>
-              <div className="icon">
-                <img src={htmlIcon} alt="Skills Icon" />
-                HTML5
-              </div>
-              <div className="icon">
-                <img src={cssIcon} alt="Skills Icon" />
-                CSS3
-              </div>
-              <div className="icon">
-                <img src={sassIcon} alt="Skills Icon" />
-                SASS
-              </div>
-            </div>
-          </div>
 
-          <div className='title'>
-            <h3>
-              <LibraryBooks fontSize='large' className='title_icon' color='info' />
-              Frameworks/ Libraries
-            </h3>
-            <div className='sub-section'>
-              <div className="icon">
-                <img src={reactIcon} alt="Skills Icon" />
-                React
-              </div>
-              <div className="icon">
-                <img src={expressIcon} alt="Skills Icon" />
-                Express
-              </div>
-              <div className="icon">
-                <img src={jqueryIcon} alt="Skills Icon" />
-                JQuery
-              </div>
-              <div className="icon">
-                <img src={bootstrapIcon} alt="Skills Icon" />
-                Bootstrap
-              </div>
-              <div className="icon">
-                <img src={muiIcon} alt="Skills Icon" />
-                MaterialUI
-              </div>
+      <div>
+        <div className='title'>
+          <h3>
+            <SettingsSuggest fontSize='large' className='title_icon' color='info' />
+            Development
+          </h3>
+          <div className='sub-section'>
+            <div className="icon">
+              <img src={javascriptIcon} alt="Skills Icon" />
+              JavaScript
             </div>
-          </div>
-
-          <div className='title'>
-            <h3>
-              <BugReportOutlined fontSize='large' className='title_icon' color='info' />
-              Testing
-            </h3>
-            <div className='sub-section'>
-              <div className="icon">
-                <img src={cypressIcon} alt="Skills Icon" />
-                Cypress
-              </div>
-              <div className="icon">
-                <img src={jestIcon} alt="Skills Icon" />
-                Jest
-              </div>
-              <div className="icon">
-                <img src={mochaIcon} alt="Skills Icon" />
-                Mocha
-              </div>
-              <div className="icon">
-                <img src={chaiIcon} alt="Skills Icon" />
-                Chai
-              </div>
+            <div className="icon">
+              <img src={pythonIcon} alt="Skills Icon" />
+              Python
             </div>
-          </div>
-          <div className='title'>
-            <h3>
-              <HomeRepairService fontSize='large' className='title_icon' color='info' />
-              SYSTEMS AND TOOLS
-            </h3>
-            <div className='sub-section'>
-              <div className="icon">
-                <img src={postgresqlIcon} alt="Skills Icon" />
-                PostgreSQL
-              </div>
-              <div className="icon">
-                <img src={vscodeIcon} alt="Skills Icon" />
-                Visual Studio
-              </div>
-              <div className="icon">
-                <img src={gitIcon} alt="Skills Icon" />
-                Git
-              </div>
-              <div className="icon">
-                <img src={figmaIcon} alt="Skills Icon" />
-                Figma
-              </div>
+            <div className="icon">
+              <img src={railIcon} alt="Skills Icon" />
+              Ruby on Rails
+            </div>
+            <div className="icon">
+              <img src={htmlIcon} alt="Skills Icon" />
+              HTML5
+            </div>
+            <div className="icon">
+              <img src={cssIcon} alt="Skills Icon" />
+              CSS3
+            </div>
+            <div className="icon">
+              <img src={sassIcon} alt="Skills Icon" />
+              SASS
             </div>
           </div>
         </div>
-      }
+
+        <div className='title'>
+          <h3>
+            <LibraryBooks fontSize='large' className='title_icon' color='info' />
+            Frameworks/ Libraries
+          </h3>
+          <div className='sub-section'>
+            <div className="icon">
+              <img src={reactIcon} alt="Skills Icon" />
+              React
+            </div>
+            <div className="icon">
+              <img src={expressIcon} alt="Skills Icon" />
+              Express
+            </div>
+            <div className="icon">
+              <img src={jqueryIcon} alt="Skills Icon" />
+              JQuery
+            </div>
+            <div className="icon">
+              <img src={bootstrapIcon} alt="Skills Icon" />
+              Bootstrap
+            </div>
+            <div className="icon">
+              <img src={muiIcon} alt="Skills Icon" />
+              MaterialUI
+            </div>
+          </div>
+        </div>
+
+        <div className='title'>
+          <h3>
+            <BugReportOutlined fontSize='large' className='title_icon' color='info' />
+            Testing
+          </h3>
+          <div className='sub-section'>
+            <div className="icon">
+              <img src={cypressIcon} alt="Skills Icon" />
+              Cypress
+            </div>
+            <div className="icon">
+              <img src={jestIcon} alt="Skills Icon" />
+              Jest
+            </div>
+            <div className="icon">
+              <img src={mochaIcon} alt="Skills Icon" />
+              Mocha
+            </div>
+            <div className="icon">
+              <img src={chaiIcon} alt="Skills Icon" />
+              Chai
+            </div>
+          </div>
+        </div>
+        <div className='title'>
+          <h3>
+            <HomeRepairService fontSize='large' className='title_icon' color='info' />
+            SYSTEMS AND TOOLS
+          </h3>
+          <div className='sub-section'>
+            <div className="icon">
+              <img src={postgresqlIcon} alt="Skills Icon" />
+              PostgreSQL
+            </div>
+            <div className="icon">
+              <img src={vscodeIcon} alt="Skills Icon" />
+              Visual Studio
+            </div>
+            <div className="icon">
+              <img src={gitIcon} alt="Skills Icon" />
+              Git
+            </div>
+            <div className="icon">
+              <img src={figmaIcon} alt="Skills Icon" />
+              Figma
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
   );

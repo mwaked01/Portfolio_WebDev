@@ -1,12 +1,100 @@
-.content{
-  border: solid;
-  border-color: #1c54b2;
-  border-radius: 10px;
-  padding: 1em;
-  margin-bottom: 1em;
-  width: auto;
-  background-color: rgba(4, 25, 61, 0.836);
+@import 'variables';
+
+.emoji {
+  font-size: 2em;
 }
-p{
-  font-size: large;
+
+#greeting {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    transition: filter 300ms;
+    filter: drop-shadow(0 0 2em #646cffaa);
+
+    .emoji {
+      font-size: 2em;
+      animation: waving-hand 2.5s infinite;
+      transform-origin: 70% 70%;
+    }
+  }
+}
+
+
+@keyframes waving-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.code-typer {
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  margin-top: 2em;
+  border-radius: 8px;
+width: 100%;
+  // max-width: 600px;
+  line-height: 1.5;
+}
+
+.code-line {
+  display: flex;
+}
+
+.line-number {
+  color: #858585;
+  margin-right: 12px;
+  user-select: none;
+}
+
+.cursor {
+  //   display: inline-block;
+  width: 0.3em;
+  height: 1.25em;
+  //   vertical-align: center;
+  background-color: #d4d4d4;
+  animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: #d4d4d4;
+  }
 }

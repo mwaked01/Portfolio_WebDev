@@ -15,9 +15,48 @@ import tinyAppGIF from '/public/projects/tinyApp/tinyApp.gif'
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-const Projects = (props) => {
+const Projects = () => {
   const [projectSelected, setProjectSelected] = useState(0)
+
+  const projects = {
+    0: {
+      name: "Go Forage",
+      url: "https://github.com/emilyem1/go-forage",
+      gif: goForageGIF,
+      png: goForagePNG,
+      description: "A single page application that connects mushroom foragers together and allows them to share blogs and map locations of their foraging spots."
+    },
+    1: {
+      name: "Smart TO-DO List",
+      url: "https://github.com/mwaked01/Smart-TODO-List",
+      gif: smart_to_do_listGIF,
+      png: smart_to_do_listPNG,
+      description: "A multi-page application that automatically categorizes the user's entries into one of four categories. Front End: SASS, NodeJS Back End: PostgreSQL, Express"
+    },
+    2: {
+      name: "Tweeter ",
+      url: "https://github.com/mwaked01/tweeter",
+      gif: tweeterGIF,
+      png: tweeterPNG,
+      description: "A multi-page Airbnb clone that uses server-side JavaScript to display the information from queries to web pages via SQL queries."
+    },
+    3: {
+      name: "PhotoLabs",
+      url: "https://github.com/mwaked01/photolabs",
+      gif: photolabsGIF,
+      png: photolabsPNG,
+      description: "A single page application that allows the user to display photos filtered by category and gives them the option to save their favorite photos."
+    },
+    4: {
+      name: "TinyApp",
+      url: "https://github.com/mwaked01/tinyapp",
+      gif: tinyAppGIF,
+      png: tinyAppPNG,
+      description: "TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs."
+    }
+  }
 
   const rightButtonClick = () => {
     let nextProject = projectSelected;
@@ -45,96 +84,27 @@ const Projects = (props) => {
 
 
   return (
-    <section id="PROJECTS">
+    <section className="projects">
       <IconButton size="small" onClick={leftButtonClick}><ArrowBackIcon className="navButton" color="primary" fontSize="large" /></IconButton>
-      {projectSelected === 0 ?
-        <div className="project">
-          <a href="https://github.com/emilyem1/go-forage">
-            <h1 className="project_title">Go Forage</h1>
-          </a>
-          <div className="project-content">
-            <img
-              src={goForagePNG}
-              alt="Go Forage"
-              onMouseEnter={(e) => handleMouseEnter(e, goForageGIF)}
-              onMouseLeave={(e) => handleMouseLeave(e, goForagePNG)}
-            />
-            <p>
-              A single page application that connects mushroom foragers together and allows them to share blogs and map locations of their foraging spots.
-            </p>
-          </div>
-        </div> : projectSelected === 1 ?
-          <div className="project">
-            <a href="https://github.com/mwaked01/Smart-TODO-List">
-              <h1 className="project_title">Smart TO-DO List</h1>
-            </a>
-            <div className="project-content">
-              <img
-                src={smart_to_do_listPNG}
-                alt="Smart TO-DO List"
-                onMouseEnter={(e) => handleMouseEnter(e, smart_to_do_listGIF)}
-                onMouseLeave={(e) => handleMouseLeave(e, smart_to_do_listPNG)}
-              />
-              <p>
-                A multi-page application that automatically categorizes the user's entries into one of four categories.
-                Front End: SASS, NodeJS
-                Back End: PostgreSQL, Express
-              </p>
-            </div>
-          </div> : projectSelected === 2 ?
 
-            <div className="project">
-              <a href="https://github.com/mwaked01/tweeter">
-                <h1 className="project_title">Tweeter</h1>
-              </a>
-              <div className="project-content">
-                <img
-                  src={tweeterPNG}
-                  alt="Tweeter"
-                  onMouseEnter={(e) => handleMouseEnter(e, tweeterGIF)}
-                  onMouseLeave={(e) => handleMouseLeave(e, tweeterPNG)}
-                />
-                <p>
-                  A multi-page Airbnb clone that uses server-side JavaScript to display the information from queries to web pages via SQL queries.
-                </p>
-              </div>
-            </div> : projectSelected === 3 ?
+      <div className="project">
+        <a className="project-title"
+          href={projects[projectSelected].url}>
+          <h1 >{projects[projectSelected].name}</h1>
+          <OpenInNewIcon/>
+        </a>
 
-              <div className="project">
-                <a href="https://github.com/mwaked01/photolabs">
-                  <h1 className="project_title">PhotoLabs</h1>
-                </a>
-                <div className="project-content">
-                  <img
-                    src={photolabsPNG}
-                    alt="PhotoLabs"
-                    onMouseEnter={(e) => handleMouseEnter(e, photolabsGIF)}
-                    onMouseLeave={(e) => handleMouseLeave(e, photolabsPNG)}
-                  />
-                  <p>
-                    A single page application that allows the user to display photos filtered by category and gives them the option to save their favorite photos.
-                  </p>
-                </div>
-              </div> : projectSelected === 4 ?
+        <img
+          src={projects[projectSelected].png}
+          alt={projects[projectSelected].name}
+          onMouseEnter={(e) => handleMouseEnter(e, projects[projectSelected].gif)}
+          onMouseLeave={(e) => handleMouseLeave(e, projects[projectSelected].png)}
+        />
+        <p className="description">
+          {projects[projectSelected].description}
+        </p>
+      </div>
 
-                <div className="project">
-                  <a href="https://github.com/mwaked01/tinyapp">
-                    <h1 className="project_title">TinyApp</h1>
-                  </a>
-                  <div className="project-content">
-                    <img
-                      src={tinyAppPNG}
-                      alt="TinyApp"
-                      onMouseEnter={(e) => handleMouseEnter(e, tinyAppGIF)}
-                      onMouseLeave={(e) => handleMouseLeave(e, tinyAppPNG)}
-                    />
-                    <p>
-                      TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs.
-                    </p>
-                  </div>
-                </div> :
-                <div>Error Loading Projects</div>
-      }
       <IconButton size="small" onClick={rightButtonClick}><ArrowForwardIcon className="navButton" color="primary" fontSize="large" /></IconButton>
 
     </section>
