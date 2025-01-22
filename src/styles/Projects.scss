@@ -1,8 +1,12 @@
+@import 'variables';
+
 .projects {
   display: flex;
-  // flex-direction: row;
-  // justify-content: center;
   width: 100%;
+  border: solid;
+  background-color: rgba(49, 117, 235, 0.2);
+  border-color: inherit;
+  border-radius: 10px;
 }
 
 .project {
@@ -10,19 +14,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
   color: inherit;
 
   img {
-    // transform: translateX(6vw);
+    margin: 1em 0;
     width: 55vw;
     height: auto;
-
+    border-radius: 10px; 
+    overflow: hidden;
     &:hover {
-      border: 2px solid rgb(33, 224, 84); // Green border on hover
-      border-width: 0.25em;
+      border: 2.5px solid rgb(33, 224, 84); // Green border on hover
     }
-
     @media (max-width: 768px) {
       width: 75vw;
     }
@@ -32,30 +34,20 @@
 .project-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-decoration: none;
-  padding-bottom: 4em;
+  padding: 1em 0;
   font-size: 1.2em;
   color: inherit;
+  h1{
+    padding-right: 0.5em;
+  }
 }
-
 
 .description {
-  padding: 1em;
-  // width: 55vw;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  margin-bottom: 1em ;
+  padding: 1em 1em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2); // Transparent background
+  border-radius: 8px;
 }
-
-// .navButton {
-//   border: solid;
-//   border-color: #2196f3;
-//   border-radius: 10px;
-// }
-
-// .project-content {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   // justify-content: ;
-// }

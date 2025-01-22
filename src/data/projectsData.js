@@ -40,7 +40,7 @@ const projectsData = {
       description: "A single page application that allows the user to display photos filtered by category and gives them the option to save their favorite photos."
     },
     4: {
-      name: "TinyApp",
+      name: "TinyApp ",
       url: "https://github.com/mwaked01/tinyapp",
       gif: tinyAppGIF,
       png: tinyAppPNG,
