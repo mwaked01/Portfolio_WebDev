@@ -10,13 +10,13 @@ const Skills = () => {
         const CategoryIcon = categoryItem.categoryIcon;
         return (
           <div className="skill-card" key={index}>
-            <h3>
+            <h3 className='category'>
               <CategoryIcon fontSize="large" className="title_icon" color="info" />
               {categoryItem.category}
             </h3>
-            <div className="sub-section">
+            <div className="skill-items">
               {categoryItem.skill.map((skillItem, skillIndex) => (
-                <div className="icon" key={skillIndex}>
+                <div className="skill-item" key={skillIndex}>
                   <img src={skillItem.icon} alt={`${skillItem.name} Icon`} />
                   {skillItem.name}
                 </div>

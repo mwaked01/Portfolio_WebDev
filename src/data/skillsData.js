@@ -110,7 +110,7 @@ const skillsData = [
         ]
     },
     {
-        category: "SYSTEMS AND TOOLS",
+        category: "SYSTEMS",
         categoryIcon: HomeRepairService,
         skill: [
             {

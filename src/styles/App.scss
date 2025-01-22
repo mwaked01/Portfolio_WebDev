@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -23,6 +24,7 @@ body {
     border: sol;
     display: flex;
     min-height: 100vh;
+    
 }
 
 .main-content {
@@ -30,6 +32,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    
     // flex-grow: 1;
     // padding: 2rem;
     // position: relative;
