@@ -2,18 +2,18 @@
 
 .connect-button {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
   background-color: $primary-color;
   color: white;
   border: none;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   transition: transform 0.3s;
-
+  height: 3rem;
   &:hover {
     // transform: translateY(-5px);
 

@@ -1,4 +1,5 @@
 @import 'variables';
+
 h3 {
   display: flex;
   align-items: center;
@@ -8,21 +9,21 @@ h3 {
   padding-right: 0.5em;
 }
 
-.title {
+.skill-card {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   border: solid;
   border-color: inherit;
   border-radius: 10px;
-  padding: 1em;
+  padding: .5em;
   margin-bottom: 1em;
   background-color: rgba(49, 117, 235, 0.2);
 }
 
 .sub-section {
   display: flex;
-flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
 
 .icon {
@@ -34,6 +35,6 @@ flex-wrap: wrap;
 }
 
 .icon img {
-  width: 4vw;
+  width: 2em;
   // height: 7vw;
 }

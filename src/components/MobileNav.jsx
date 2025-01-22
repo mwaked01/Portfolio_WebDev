@@ -1,5 +1,14 @@
 import React from 'react';
-import { Code, Psychology, Fingerprint, Menu, Close } from '@mui/icons-material';
+import {
+  Code,
+  Psychology,
+  Fingerprint,
+  Menu,
+  Close,
+  GitHub,
+  LinkedIn
+} from '@mui/icons-material';
+
 import '../styles/MobileNav.scss';
 
 const MobileNav = ({ isOpen, onToggle, activeTab, onTabChange }) => {
@@ -16,9 +25,9 @@ const MobileNav = ({ isOpen, onToggle, activeTab, onTabChange }) => {
       </button>
       {isOpen && (
         <nav className="mobile-nav-tabs">
-      <button className="mobile-nav-toggle" onClick={onToggle}>
-        {isOpen && <Close />}
-      </button>
+          <button className="mobile-nav-toggle" onClick={onToggle}>
+            {isOpen && <Close />}
+          </button>
           {tabs.map((tab) => (
             <button
               key={tab.name}
@@ -31,6 +40,16 @@ const MobileNav = ({ isOpen, onToggle, activeTab, onTabChange }) => {
           ))}
         </nav>
       )}
+      {!isOpen &&
+        <div className='socials-container'>
+          <a className='socials' href='https://linkedin.com/in/mohamed-waked-316899212'>
+            <LinkedIn />
+          </a>
+          <a className='socials' href="https://github.com/mwaked01">
+            <GitHub />
+          </a>
+        </div>
+      }
     </div>
   );
 };
