@@ -48,6 +48,7 @@ const Projects = () => {
         </a>
 
         <img
+          className={projectSelected === 3 ? "phone-app" : ""}
           src={projects[projectSelected].png}
           alt={projects[projectSelected].name}
           onMouseEnter={(e) => handleMouseEnter(e, projects[projectSelected].gif)}
@@ -55,6 +56,8 @@ const Projects = () => {
         />
         <p className="description">
           {projects[projectSelected].description}
+          <br />
+          {projects[projectSelected].techStack}
         </p>
       </div>
 

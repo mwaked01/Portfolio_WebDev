@@ -55,46 +55,65 @@
   }
 }
 
-.code-typer {
-  font-family: "Courier New", Courier, monospace;
-  font-size: larger;
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 16px;
-  margin-top: 2em;
-  border-radius: 8px;
-width: 100%;
-  // max-width: 600px;
-  line-height: 1.5;
+.terminal-card {
+  width: 52vw;
+  max-width: 42rem;
+  background-color: rgba(49, 117, 235, 0.3);
+  border: 1px solid #4a5568;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-block: 1em;
+  @media (max-width: 768px) {
+    width: 85vw;
+  }
 }
 
-.code-line {
+.terminal-header {
   display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #2d3748;
+
+  .terminal-button {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+
+    &.red {
+      background-color: #f56565;
+    }
+
+    &.yellow {
+      background-color: #ecc94b;
+    }
+
+    &.green {
+      background-color: #48bb78;
+    }
+  }
 }
 
-.line-number {
-  color: #858585;
-  margin-right: 12px;
-  user-select: none;
+.terminal-content {
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 1.5em;
+  color: inherit;
+  // white-space: pre-wrap;
 }
 
 .cursor {
-  //   display: inline-block;
-  width: 0.3em;
-  height: 1.25em;
-  //   vertical-align: center;
-  background-color: #d4d4d4;
-  animation: blink 0.5s step-end infinite;
+  animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
 
-  from,
-  to {
-    background-color: transparent;
+  0%,
+  100% {
+    opacity: 1;
   }
 
   50% {
-    background-color: #d4d4d4;
+    opacity: 0;
   }
 }
